@@ -1,0 +1,245 @@
+:root{
+    --text-color: rgb(247, 249, 249);
+    --text-color-gray: rgba(247, 249, 249, 0.589);
+    --light-color: rgb(63, 63, 71);
+    --dark-color: rgb(30, 30, 36);
+}
+
+@font-face {
+    font-family: "Minimalust";
+    src: url(Fonts/Minimalust\ Regular.ttf)format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Minimalust";
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/*nav-----------------------------------------------------------------------*/
+nav{
+    /*Flex*/
+    display: flex;
+    flex-direction: row;
+
+    height: 7vh;
+    padding: 25px;
+    align-items: center;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+
+}
+nav a{
+    margin-right: 17px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo{
+    font-size: 40px;
+}
+nav button{
+    font-size: 17px;
+    margin-right: 17px;
+    text-decoration: none;
+    color: var(--text-color);
+    border: none;
+    background-color: transparent;
+}
+a:hover{
+    color: var(--text-color-gray);
+}
+/*--------------------------------------------------------------------------*/
+
+/*content-------------------------------------------------------------------*/
+
+.content-grid{
+    display: grid;
+    background-color: var(--dark-color);
+    padding: 2vh;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2vw;
+}
+
+.content-grid div{
+    display: flex;
+    background-color: var(--light-color);
+    height: 25vw;
+    width: 25vw;
+    margin: 3vw;
+    border-radius: 3vw;
+    place-items: center;
+    justify-content: center;
+}
+
+.content-grid div img{
+    height: 12vw;
+}
+
+.content-text{
+    display: flex;
+    background-color: var(--light-color);
+    height: 66vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.content-text div{
+    display: flex;
+}
+
+.content-text div a{
+    display: flex;
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: var(--text-color);
+    height: 5vw;
+    width: 10vw;
+    background-color: var(--dark-color);
+    margin: 2vw;
+    border-radius: 1vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-text a:hover{
+    color: var(--text-color-gray);
+}
+
+#title div{
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.myname{
+    color: var(--text-color-gray);
+}
+
+.nav-height{
+    height: 7vh;
+}
+/*--------------------------------------------------------------------------*/
+
+/*footer--------------------------------------------------------------------*/
+footer{
+    background-color: var();
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    color: var(--text-color-gray);
+}
+/*--------------------------------------------------------------------------*/
+
+/*responsive----------------------------------------------------------------*/
+
+/* Smartphones (portrait) */
+@media only screen and (max-width: 400px) {
+    /* Styles */
+    nav{
+        /*Flex*/
+        display: flex;
+        flex-direction: column;
+    
+        height: 45vw;
+        padding: 25px;
+        align-items: center;
+    
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+    
+    }
+
+    nav * {
+        padding: 1vw;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        padding: 5vw;
+    }
+    .content-grid div {
+        height: 80vw;
+        width: 80vw;
+    }
+    .content-grid div img {
+        height: 35vw;
+    }
+
+    .content-text{
+        height: 30vh;
+    }
+
+    #contact{
+        height: 70vh;
+        font-size: 5vh;
+    }
+
+    #contact div{
+        flex-direction: column;
+    }
+
+    .content-text div a{
+        font-size: 5vw;
+        height: 20vw;
+        width: 40vw;
+        margin: 4vw;
+        border-radius: 2vw;
+    }
+
+    footer{
+        font-size: 5vw;
+    }
+  }
+  
+  /* iPads (portrait and landscape)  */
+  @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    /* Styles */
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 5vw;
+    }
+    .content-grid div {
+        height: 40vw;
+        width: 40vw;
+    }
+    .content-grid div img {
+        height: 17vw;
+    }
+
+    .content-text {
+        height: 40vh;
+    }
+    #contact{
+        height: 40vh;
+        font-size: 4vh;
+    }
+
+    .content-text div a{
+        font-size: 2.0vw;
+        height: 8vw;
+        width: 16vw;
+        margin: 4vw;
+    }
+  } 
